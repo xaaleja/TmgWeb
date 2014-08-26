@@ -1,0 +1,453 @@
+html, body {
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+h1 {
+	text-align: center;
+}
+h2 {
+	text-align: center;
+}
+
+ul, ol{
+	list-style: none;
+}
+
+a:link
+{
+	text-decoration:none;
+}
+
+#tmg-social {
+	text-align: right;
+}
+
+.portada_argazkia{
+	width:900px;
+	height: 300px;
+}
+
+#container {
+position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #000;*/ overflow:hidden;
+
+}
+
+@media screen and (max-width: 500px) {
+	body{background:#000;}
+	h1{color:yellow;}
+	h2{color:yellow;}
+	.dropdown{color:yellow;}
+}
+
+@media screen and (min-width: 501px) and (max-width: 800px) {
+	body{background:grey;}
+	h1{color:green;}
+	h2{color:green;}
+	.dropdown{color:green;}
+}
+
+#cabecera {
+	width:60em; position:relative; float:left; margin:2em 0 1em 0; min-height:175px;
+}
+
+
+/*#cabecera {
+	margin: auto;
+	width: 60em;
+	margin:2em 0 1em 0; min-height:80px;
+}*/
+#content {
+	width:56em; margin:3em 2em; position:relative; float:left; min-height:500px;
+}
+
+#kontzertuak {
+	position:relative;
+	float:left;
+	width:65%;
+}
+
+#kontzertuak  h1{
+	text-align: left;
+}
+
+
+#zutabea {
+	position:relative;
+	float:right;
+	margin-top: 30px;
+	width:30%;
+}
+
+#zutabea audio {
+	width:100%;
+}
+.right{
+	position:relative;
+	/*width:250px;
+	height:150px;*/
+	clear:both;
+	margin:20px 0px;
+	background-color: #EEEEEE;
+    border-radius: 6px;
+}
+#berriak {
+	position:relative;
+	float:left;
+	width:65%;
+}
+
+#kontzertuak {
+	position:relative;
+	float:left;
+	width:65%;
+}
+
+#berriak h1 {
+	text-align: left;
+}
+
+.kontzertu{
+	margin:5px 0px;
+	padding-right: 10px;
+	background-color: #EEEEEE;
+    border-radius: 6px;
+	margin-bottom: 15px;
+	display:inline-block;
+	clear:both;
+	width:100%;
+}
+
+.data-kontzertu {
+	position: relative;
+	float:left;
+	width: 20%;
+	font-size: 15pt;
+	margin-left: 2px;
+}
+
+.lekua-kontzertu {
+	position: relative;
+	float: right;
+	font-size: 12pt;
+	width:70%;
+	padding-top:7px;
+
+}
+.img-kontzertu{
+	position: relative;
+	width: 25%;
+	float: left;
+}
+.img-kontzertu img{
+	width:135px;
+	height: 175px;
+	margin-left:20px;
+}
+.info-kontzertu{
+	position: relative;
+	width: 65%;
+	float: right;
+}
+.kontz{
+	clear:both;
+	display:none;
+}
+.gehiago-ikusi, .gutxiago-ikusi{
+	clear:both;
+	text-align:left;
+	margin-left:10px;
+}
+
+.artikuluak{
+	margin:10px 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #EEEEEE;
+    border-radius: 6px;
+	margin-bottom: 10px;
+	clear: both;
+	display: inline-block;
+}
+.artikuluak h1 {
+	margin-bottom: 0px;
+}
+.artikuluak h3 {
+	font-size: 9pt;
+	text-align: left;
+	margin-top: 1px;
+	margin-left: 2px;
+}
+.right a {
+	margin-right: 10px;
+}
+.right h3 {
+	font-size: 10pt;
+	text-align: left;
+}
+
+#entzun-abestia
+{
+	padding: 0 0 3px 10px;
+}
+
+#berria{
+	position:relative;
+	float:left;
+	width:65%;
+	margin-top: 20px;
+}
+#biografia{
+	position:relative;
+	float:left;
+	width:65%;
+}
+#biografia h1{
+	text-align: left;
+}
+#berria h1{
+	text-align: left;
+}
+#diska {
+	position:relative;
+	float:left;
+	width:65%;
+	margin-top: 25px;
+}
+#diska h1 {
+	text-align: left;
+	font-size: 18pt;
+}
+#karatula{
+	position:relative;
+	float:left;
+	width: 45%;
+}
+#karatula img{
+	width:230px;
+	height: 240px;
+	/*margin-left:20px;*/
+	/*margin-right: 10px;*/
+}
+#info-diska{
+	position: relative;
+	width: 55%;
+	float: right;
+}
+#info-diska ul {
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	margin: 0px;
+}
+/*#info-diska ul {
+   padding-right: 0px;
+   padding-left: 0px;
+   padding-bottom: 0px;
+   padding-top: 0px;
+   margin: 0px;
+}
+#info-diska > ul li ul li {
+	float:left;
+	margin-right: 3px;
+}*/
+#info-diska ul li ul li {
+	display: inline-block;
+}
+#letra{
+	clear:both;
+	display:none;
+	font-size: 10pt;
+}
+
+/*
+#access {
+	border-bottom: 1px solid #EEEEEE;
+	text-align:center;
+}
+
+
+#access ul li {display:inline-block;}
+#access ul li a { margin:0 8px; padding:3px 10px; display:block;}
+#access ul li a:link, #menu-ppal ul li a:visited{color:#FFF; background:#317E90;}
+#access ul li a:hover{color:#FFF; background:#304950;}
+*/
+
+.access {
+	margin-left: 0em;
+	margin-top: 0em;
+	font-size: 13pt;
+	width:60em;
+}
+
+.access li a {
+	background-color: #000;
+	color:#FFF;
+	text-decoration: none;
+	padding:10px 20px;
+	display: block;
+}
+
+.access li a:hover {
+	background-color:#434343;
+}
+
+.access > li {
+	float:left;
+}
+
+.access li ul {
+	display: none;
+	position: absolute;
+	min-width: 140px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.access li:hover > ul {
+	display: block;
+}
+
+.access li ul li a{
+	background-color: #CCC;
+	color: #000;
+
+}
+#pie {
+	width:60em; position:relative; float:left;
+}
+
+#kontaktua h1 {
+	text-align: left;
+}
+
+#kontaktua {
+	width: 65%;
+	float: left;
+	position: relative;
+    border-radius: 15px;
+   -moz-border-radius: 15px;
+   -webkit-border-radius: 15px;
+}
+
+#kontaktua input,
+#kontaktua select,
+#kontaktua textarea,
+#kontaktua label {
+   font-size: 15px;
+   margin-bottom: 2px;
+}
+
+#kontaktua input,
+#kontaktua select,
+#kontaktua textarea {
+   width: 60%;
+   background: #999;
+   border: 0;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+   margin-bottom: 25px;
+   padding: 5px;
+}
+
+
+#kontaktua input:focus,
+#kontaktua select:focus,
+#kontaktua textarea:focus {
+   background-color: #E5E6E7;
+}
+
+#kontaktua textarea {
+   height: 150px;
+}
+
+
+#kontaktua #submit {
+   width: 150px;
+   border: none;
+   background-color: #E5E6E7;
+}
+
+#kontaktua #submit:hover {
+   background-color: #BFD7C1;
+   color: #6EA070;
+}
+
+input:required, textarea:required {
+   box-shadow: none;
+   -moz-box-shadow: none;
+   -webkit-box-shadow: none;
+   -o-box-shadow: none;
+}
+
+#kontaktua .required {
+   font-weight:bold;
+   color: #E5E6E7;
+}
+
+#failure, #success {
+   color: #6EA070;
+   display:none;
+}
+
+#galeria {
+	position:relative;
+	float:left;
+	width:65%;
+}
+
+#galeria h1 {
+	text-align: left;
+}
+
+#galeria img {
+	width: 150px;
+	height: 150px;
+	margin-right: 10px;
+}
+#form-kontaktua {
+	text-decoration: none;
+}
+
+#bideoa {
+	position:relative;
+	float:left;
+	width:65%;
+}
+
+#bideoa h1 {
+	text-align: left;
+}
+
+.bid {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.bid iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.berria-argazki {
+	position: relative;
+	float: left;
+	width: 30%;
+	margin-bottom: 5px;
+}
+.berria-argazki img {
+	width: 150px;
+	height: 160px;
+}
+.berria-testua {
+	position: relative;
+	float: right;
+	width: 70%;
+	margin-bottom: 5px;
+}
+

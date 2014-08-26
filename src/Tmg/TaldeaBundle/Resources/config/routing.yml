@@ -1,0 +1,45 @@
+taldea_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: TaldeaBundle:Default:index }
+portada:
+    pattern: /
+    defaults: { _controller: TaldeaBundle:Default:portada }
+kontzertuak:
+    pattern: /kontzertuak
+    defaults: { _controller:TaldeaBundle:Default:kontzertuak }
+diskografia:
+    pattern: /diskografia
+    defaults: { _controller:TaldeaBundle:Default:diskografia }
+biografia:
+    pattern: /biografia
+    defaults: { _controller:TaldeaBundle:Default:biografia }
+bideoak:
+    pattern: /bideoak
+    defaults: { _controller:TaldeaBundle:Default:bideoak }
+argazkiak:
+    pattern: /argazkiak
+    defaults: { _controller:TaldeaBundle:Default:argazkiak }
+galeria_kontzertua:
+    pattern: /argazkiak/kontzertua/{slug}
+    defaults: { _controller:TaldeaBundle:Default:galeriaKontzertua }
+galeria_diska:
+    pattern: /argazkiak/diska/{slug}
+    defaults: { _controller:TaldeaBundle:Default:galeriaDiska }
+galeria_bestelakoa:
+    pattern: /argazkiak/{slug}
+    defaults: { _controller:TaldeaBundle:Default:galeriaBestelakoa }
+denda:
+    pattern: /denda
+    defaults: { _controller:TaldeaBundle:Default:denda }
+berria:
+    pattern: /berria/{id}
+    defaults: { _controller:TaldeaBundle:Default:berria }
+diska:
+    pattern: /diskografia/{id}
+    defaults: { _controller:TaldeaBundle:Default:diska}
+iraganeko_kontzertuak:
+    pattern: /iraganekoKontzertuak
+    defaults: { _controller:TaldeaBundle:Default:iragKontzertuak }
+kontaktua:
+    pattern: /kontaktua
+    defaults: { _controller:TaldeaBundle:Default:kontaktua }

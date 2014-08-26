@@ -1,0 +1,86 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('bundles/taldea/css/style.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/taldea/css/vinyl.css') }}" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="{{ asset ('bundles/taldea/source/jquery.fancybox.css') }}" type="text/css" media="screen" />
+{% endblock %}
+
+{% block body %}
+    <header id="cabecera">
+        <!--<h1><a href="{{ path('portada') }}">TMG</a></h1> -->
+            {% set locale = app.request.locale %}
+            {% if locale == 'es' %}
+                <span>Español</span>
+                <a href="{{ path('portada', { '_locale': 'en' }) }}">English</a>
+                <a href="{{ path('portada', { '_locale': 'eu' }) }}">Euskara</a>
+            {% elseif locale == 'en' %}
+                <a href="{{ path('portada', { '_locale': 'es' }) }}">Español</a>
+                <a href="{{ path('portada', { '_locale': 'eu' }) }}">Euskara</a>
+                <span>English</span>
+            {% elseif locale == 'eu' %}
+                <a href="{{ path('portada', { '_locale': 'es' }) }}">Español</a>
+                <a href="{{ path('portada', { '_locale': 'en' }) }}">English</a>
+                <span>Euskara</span>
+            {% endif %}
+            <div id="tmg-social">
+                <a href="https://www.facebook.com/tommygun.santurtzi">Facebook</a>
+                <a href="https://twitter.com/TommyGun_TMG">Twitter</a>
+                <a href="https://tmg-tommygun.bandcamp.com">Bandcamp</a>
+                <a href="https://www.youtube.com/user/TommyGunArmy2010">Youtube</a>
+            </div>
+        <h1><a href="{{ path('portada') }}"><img class="portada_argazkia" src="{{ asset(argazkien_direktorioa ~ "35.jpg") }}"></img>
+</a></h1>
+        <nav>
+            <ul class="access">
+                <li><a href="{{ path('portada') }}">{{ 'menu.berriak' | trans }}</a></li>
+                <li><a href="{{ path('kontzertuak') }}">{{ 'menu.kontzertuak' | trans}}</a>
+                    <ul>
+                        <li><a href="{{ path('kontzertuak') }}">{{ 'menu.hurrengoak' | trans}}</a></li>
+                        <li><a href="{{ path('iraganeko_kontzertuak') }}">{{'menu.iraganekoak' | trans}}</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ path('diskografia') }}">{{ 'menu.diskografia'| trans}}</a>
+                    <ul>
+                        <li><a href="{{ path('diska', {'id': 19}) }}">Garage's hits</a></li>
+                        <li><a href="{{ path('diska', {'id': 20}) }}">Nazkagarrien aurka</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ path('biografia') }}">{{ 'menu.biografia' | trans}}</a></li>
+                <li><a href="{{ path('bideoak') }}">{{ 'menu.bideoak' | trans}}</a></li>
+                <li><a href="{{ path('argazkiak') }}">{{ 'menu.argazkiak' | trans}}</a></li>
+                <li><a href="{{ path('kontaktua') }}">{{ 'menu.kontaktua' | trans}}</a></li>
+                <li><a href="{{ path('denda') }}">{{ 'menu.denda' | trans}}</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="content">
+        <article>
+              {% block article %}{% endblock %}
+        </article>
+
+        <aside>
+            <div id="zutabea">
+                <aside class="right">
+                    <!--<h1>Abestia</h1>-->
+                    <audio src="{{ asset(abestien_direktorioa ~ "11 Odola, izerdia eta malkoak.mp3")}}" controls autobuffer >
+                    </audio>
+
+                </aside>
+                <aside class="right">
+                   <!-- <h1>Txioak</h1>-->
+                    <a class="twitter-timeline"  href="https://twitter.com/TommyGun_TMG"  data-widget-id="491636661357256704">@TommyGun_TMG(r)en Txioak</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+                </aside>
+              {% block aside %}
+
+              {% endblock %}
+            </div>
+
+        </aside>
+    </div>
+{% endblock %}
+

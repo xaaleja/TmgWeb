@@ -1,0 +1,33 @@
+{% extends '::frontend.html.twig' %}
+{% block title %}Berriak{% endblock %}
+{% block article %}
+    <section id="berria">
+        <!-- <article class="artikuluak">
+            <header>
+                <h1>{{berria.titularra}}</h1>
+            </header>
+            <p>{{berria.testua}}</p>
+            <footer>
+                <h3>{{berria.data | date("Y-m-d") }}</h3>
+            </footer>
+        </article>-->
+                            <article class="artikuluak">
+                        <header>
+                            <h1>{{berria.titularra}}</h1>
+                            <h3>{{berria.data | date("Y-m-d")}}</h3>
+                        </header>
+                            <div class="berria-argazki">
+                                <img class="cover" src="{{ asset(argazkien_direktorioa ~ berria.argazkiak[0].argazkia) }}"></img>
+                            </div>
+                            <div class="berria-testua">
+                                <p>{{berria.testua}}</p>
+                            </div>
+                    </article>
+    </section>
+{% endblock %}
+{% block aside %}
+        <aside class="right">
+            <h1>Hurrengo kontzertuak</h1>
+        </aside>
+           <!-- </div>-->
+{% endblock %}

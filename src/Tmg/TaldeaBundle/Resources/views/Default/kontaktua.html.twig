@@ -1,0 +1,30 @@
+{% extends '::frontend.html.twig' %}
+{% block title %}{{'menu.kontaktua' | trans}}{% endblock %}
+{% block article %}
+        <article id="kontaktua">
+            <h1>{{'menu.kontaktua' | trans}}</h1>
+            <form method="post" action="">
+              <ul id="form-kontaktua">
+                    <li><label for="izena">{{'kontaktua.izena' | trans}}: <span class="required">*</span></label></li>
+                    <li><input type="text" id="izena" name="izena" value="" placeholder="{{'kontaktua.zureizena' | trans}}" required="required" autofocus="autofocus" /></li>
+                    <li><label for="emaila">{{'kontaktua.emaila' | trans}}: <span class="required">*</span></label></li>
+                    <li><input type="email" id="emaila" name="emaila" value="" placeholder="{{'kontaktua.zureemaila' | trans}}" required="required" /></li>
+
+                    <li><label for="gaia">{{'kontaktua.gaia' | trans}}: </label></li>
+                    <li><textarea id="gaia" name="gaia" placeholder="{{'kontaktua.zuregaia' | trans}}" required="required"></textarea></li>
+
+                    <li><label for="mezua">{{'kontaktua.mezua' | trans}}: <span class="required">*</span></label></li>
+                    <li><textarea id="mezua" name="mezua" placeholder="{{'kontaktua.zuremezua' | trans}}" required="required"></textarea></li>
+
+                    <li><input type="submit" value="{{'kontaktua.bidali' | trans}}" id="submit" /></li>
+              </ul>
+            </form>
+
+        </article>
+{% endblock %}
+{% block aside %}
+            <aside class="right">
+                <h1>{{'menu.hurrengoak' | trans}}</h1>
+            </aside>
+           <!-- </div>-->
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends '::frontend.html.twig' %}
+{% block title %}{{'menu.argazkiak' | trans}}{% endblock %}
+{% block article %}
+
+    <div id="galeria">
+                <h1>{{'galeria.karatulak' | trans }}</h1>
+                {% for diska in diskak %}
+                    <a href="{{ path('galeria_diska', {'slug': diska.slug}) }}"><img src="{{ asset(argazkien_direktorioa ~ diska.argazkiak[0].argazkia) }}"</img></a>
+                {% endfor %}
+                <h1>{{'galeria.kontzertuak' | trans}}</h1>
+                {% for kontzertua in kontzertuak %}
+                    <a href="{{ path('galeria_kontzertua', {'slug': kontzertua.slug}) }}"><img src="{{ asset(argazkien_direktorioa ~ kontzertua.argazkiak[0].argazkia) }}"</img></a>
+                {% endfor %}
+
+
+
+                <!--<h2>Beste argazkiak</h2>
+                {% for berria in berriak %}
+                    {% for argazkia in berria.argazkiak %}
+                        <a class="fancybox" rel="group" href="{{ asset(argazkien_direktorioa ~ argazkia.argazkia) }}" title="{{argazkia.slug}}"><img src="{{ asset(argazkien_direktorioa ~ argazkia.argazkia) }}" alt="{{argazkia.slug}}"></a>
+                    {% endfor %}
+                {% endfor %}
+                -->
+    </div>
+{% endblock %}
+{% block aside %}
+            <aside class="right">
+                <h1>{{'menu.hurrengoak' | trans}}</h1>
+            </aside>
+
+           <!-- </div>-->
+{% endblock %}
+
+
+
+
+

@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="eu" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>menu.berriak</source>
+                <target>News</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>menu.kontzertuak</source>
+                <target>Tour dates</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>menu.diskografia</source>
+                <target>Albums</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>menu.hurrengoak</source>
+                <target>Next shows</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>menu.iraganekoak</source>
+                <target>Past shows</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>menu.biografia</source>
+                <target>Biography</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>menu.bideoak</source>
+                <target>Videos</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>menu.argazkiak</source>
+                <target>Photos</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>menu.kontaktua</source>
+                <target>Contact</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>menu.denda</source>
+                <target>Store</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>kontaktua.izena</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>kontaktua.emaila</source>
+                <target>Email</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>kontaktua.gaia</source>
+                <target>Subject</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>kontaktua.mezua</source>
+                <target>Message</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>kontaktua.bidali</source>
+                <target>Send</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>kontaktua.zureizena</source>
+                <target>Your name</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>kontaktua.zureemaila</source>
+                <target>youremail@email.com</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>kontaktua.zuregaia</source>
+                <target>Write message's subject</target>
+            </trans-unit>
+            <trans-unit id="19">
+                <source>kontaktua.zuremezua</source>
+                <target>Write your message...</target>
+            </trans-unit>
+            <trans-unit id="20">
+                <source>galeria.karatulak</source>
+                <target>Covers</target>
+            </trans-unit>
+            <trans-unit id="21">
+                <source>galeria.kontzertuak</source>
+                <target>Gigs</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

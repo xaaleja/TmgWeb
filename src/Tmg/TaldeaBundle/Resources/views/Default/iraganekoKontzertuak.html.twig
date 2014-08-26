@@ -1,0 +1,48 @@
+{% extends '::frontend.html.twig' %}
+{% block title %}{{'menu.iraganekoak' | trans}}{% endblock %}
+{% block article %}
+    <!--<div id="portada">-->
+
+            <section id="kontzertuak">
+                    <h1>{{'menu.iraganekoak' | trans}}</h1>
+                    {% for kontzertua in kontzertuak %}
+                        <article class="kontzertu">
+                            <header>
+                                <h2 class="data-kontzertu">{{kontzertua.data |date("Y-m-d") }}</h2>
+                                <h3 class="lekua-kontzertu">{{kontzertua.lekua}} <a href={{kontzertua.esteka}}>webgunea</a></h3>
+                            </header>
+                            <article class="kontz">
+                                <!--{% for arga in kontzertua.argazkiak %}
+                                    <div class="img-kontzertu">
+                                        <img src="{{ asset(argazkien_direktorioa ~ arga.argazkia) }}"</img>
+                                    </div>
+                                {% endfor %}-->
+                                <div class="img-kontzertu">
+                                    <img src="{{ asset(argazkien_direktorioa ~ kontzertua.argazkiak[0].argazkia) }}"</img>
+                                </div>
+                                <div class="info-kontzertu">
+                                    <p>Beste taldeak: {{kontzertua.besteTaldeak}} </p>
+                                    <p>Ordua: {{kontzertua.ordua}} </p>
+                                    <p>Prezioa: {{kontzertua.sarrera}} €</p>
+                                </div>
+                            </article>
+                            <div class="gehiago-ikusi">
+                                <a href="#">Gehiago ikusi</a>
+                            </div>
+                            <div class="gutxiago-ikusi" style="display: none">
+                                <a href="#">Gutxiago ikusi</a>
+                            </div>
+                        </article>
+                    {% endfor %}
+            </section>
+{% endblock %}
+{% block aside %}
+            <aside class="right">
+                <h1>Azken berriak</h1>
+            </aside>
+
+           <!-- </div>-->
+{% endblock %}
+
+
+

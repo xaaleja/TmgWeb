@@ -1,0 +1,27 @@
+{% extends '::frontend.html.twig' %}
+{% block title %}{{'menu.diskografia' | trans}}{% endblock %}
+{% block article %}
+
+    <section id="kontzertuak">
+        <h1>{{'menu.diskografia' | trans}}</h1>
+        {% for diska in diskak %}
+            <div class="case"><a href="{{ path('diska', {'id': diska.id}) }}">
+                <div class="overlay"></div>
+                <!-- {% for argazkia in diska.argazkiak %}
+                    <img class="cover" src="{{ asset(argazkien_direktorioa ~ argazkia.argazkia) }}"></img>
+                {% endfor %}
+                -->
+                <img class="cover" src="{{ asset(argazkien_direktorioa ~ diska.argazkiak[0].argazkia) }}"></img>
+                <div class="slotwrapper">
+                    <div class="slot"></div>
+                </div>
+                <div class="vinyl"></div>
+            </a></div>
+        {% endfor %}
+    </section>
+{% endblock %}
+{% block aside %}
+            <aside class="right">
+                <h1>{{'menu.hurrengoak' | trans}}</h1>
+            </aside>
+{% endblock %}
