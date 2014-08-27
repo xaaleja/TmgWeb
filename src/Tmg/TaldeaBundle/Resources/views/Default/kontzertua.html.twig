@@ -1,8 +1,6 @@
 {% extends '::frontend.html.twig' %}
 {% block title %}{{'menu.hurrengoak' | trans}}{% endblock %}
 {% block article %}
-    <!--<div id="portada">-->
-
             <section id="kontzertuak">
                     <h1>{{'menu.hurrengoak' | trans}}</h1>
                     {% for kontzertua in kontzertuak %}
@@ -29,21 +27,19 @@
                                 </div>
                             </article>
                             <div class="gehiago-ikusi">
-                                <a href="#">Gehiago ikusi</a>
+                                Gehiago ikusi
                             </div>
                             <div class="gutxiago-ikusi" style="display: none">
-                                <a href="#">Gutxiago ikusi</a>
+                                Gutxiago ikusi
                             </div>
                         </article>
                     {% endfor %}
             </section>
 {% endblock %}
 {% block aside %}
-            <aside class="right">
+            <!--<aside class="right">
                 <h1>Azken berriak</h1>
-            </aside>
-
-           <!-- </div>-->
+            </aside>-->
 {% endblock %}
 
 

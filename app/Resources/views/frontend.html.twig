@@ -10,25 +10,27 @@
 {% block body %}
     <header id="cabecera">
         <!--<h1><a href="{{ path('portada') }}">TMG</a></h1> -->
-            {% set locale = app.request.locale %}
-            {% if locale == 'es' %}
-                <span>Español</span>
-                <a href="{{ path('portada', { '_locale': 'en' }) }}">English</a>
-                <a href="{{ path('portada', { '_locale': 'eu' }) }}">Euskara</a>
-            {% elseif locale == 'en' %}
-                <a href="{{ path('portada', { '_locale': 'es' }) }}">Español</a>
-                <a href="{{ path('portada', { '_locale': 'eu' }) }}">Euskara</a>
-                <span>English</span>
-            {% elseif locale == 'eu' %}
-                <a href="{{ path('portada', { '_locale': 'es' }) }}">Español</a>
-                <a href="{{ path('portada', { '_locale': 'en' }) }}">English</a>
-                <span>Euskara</span>
-            {% endif %}
+            <div id="hizkuntzak">
+                {% set locale = app.request.locale %}
+                {% if locale == 'es' %}
+                    <span>CAS</span>
+                    <a href="{{ path('portada', { '_locale': 'en' }) }}">ENG</a>
+                    <a href="{{ path('portada', { '_locale': 'eu' }) }}">EUS</a>
+                {% elseif locale == 'en' %}
+                    <a href="{{ path('portada', { '_locale': 'es' }) }}">CAS</a>
+                    <a href="{{ path('portada', { '_locale': 'eu' }) }}">EUS</a>
+                    <span>ENG</span>
+                {% elseif locale == 'eu' %}
+                    <a href="{{ path('portada', { '_locale': 'es' }) }}">CAS</a>
+                    <a href="{{ path('portada', { '_locale': 'en' }) }}">ENG</a>
+                    <span>EUS</span>
+                {% endif %}
+            </div>
             <div id="tmg-social">
-                <a href="https://www.facebook.com/tommygun.santurtzi">Facebook</a>
-                <a href="https://twitter.com/TommyGun_TMG">Twitter</a>
-                <a href="https://tmg-tommygun.bandcamp.com">Bandcamp</a>
-                <a href="https://www.youtube.com/user/TommyGunArmy2010">Youtube</a>
+                <a href="https://www.facebook.com/tommygun.santurtzi"><img src="{{ asset(argazkien_direktorioa ~ "ikono-sozialak/facebook.png") }}"></img></a>
+                <a href="https://twitter.com/TommyGun_TMG"><img src="{{ asset(argazkien_direktorioa ~ "ikono-sozialak/twitter.png") }}"></img></a>
+                <a href="https://tmg-tommygun.bandcamp.com"><img src="{{ asset(argazkien_direktorioa ~ "ikono-sozialak/bandcamp.png") }}"></img></a>
+                <a href="https://www.youtube.com/user/TommyGunArmy2010"><img src="{{ asset(argazkien_direktorioa ~ "ikono-sozialak/youtube.png") }}"></img></a>
             </div>
         <h1><a href="{{ path('portada') }}"><img class="portada_argazkia" src="{{ asset(argazkien_direktorioa ~ "35.jpg") }}"></img>
 </a></h1>

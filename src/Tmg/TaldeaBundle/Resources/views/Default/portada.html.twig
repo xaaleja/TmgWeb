@@ -1,7 +1,6 @@
 {% extends '::frontend.html.twig' %}
 {% block title %}{{'menu.berriak' | trans}}{% endblock %}
 {% block article %}
-    <!--<div id="portada">-->
         <section id="berriak">
             <h1>{{'menu.berriak' | trans}}</h1>
                 {% for berria in berriak %}
@@ -34,5 +33,4 @@
                     </ul>
                 {% endfor %}
             </aside>
-           <!-- </div>-->
 {% endblock %}

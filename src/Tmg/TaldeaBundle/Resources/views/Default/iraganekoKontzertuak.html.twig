@@ -1,8 +1,6 @@
 {% extends '::frontend.html.twig' %}
 {% block title %}{{'menu.iraganekoak' | trans}}{% endblock %}
 {% block article %}
-    <!--<div id="portada">-->
-
             <section id="kontzertuak">
                     <h1>{{'menu.iraganekoak' | trans}}</h1>
                     {% for kontzertua in kontzertuak %}
@@ -12,11 +10,11 @@
                                 <h3 class="lekua-kontzertu">{{kontzertua.lekua}} <a href={{kontzertua.esteka}}>webgunea</a></h3>
                             </header>
                             <article class="kontz">
-                                <!--{% for arga in kontzertua.argazkiak %}
+                                <!-- {% for arga in kontzertua.argazkiak %}
                                     <div class="img-kontzertu">
                                         <img src="{{ asset(argazkien_direktorioa ~ arga.argazkia) }}"</img>
                                     </div>
-                                {% endfor %}-->
+                                {% endfor %} -->
                                 <div class="img-kontzertu">
                                     <img src="{{ asset(argazkien_direktorioa ~ kontzertua.argazkiak[0].argazkia) }}"</img>
                                 </div>
@@ -27,21 +25,21 @@
                                 </div>
                             </article>
                             <div class="gehiago-ikusi">
-                                <a href="#">Gehiago ikusi</a>
+                                Gehiago ikusi
                             </div>
                             <div class="gutxiago-ikusi" style="display: none">
-                                <a href="#">Gutxiago ikusi</a>
+                                Gutxiago ikusi
                             </div>
                         </article>
                     {% endfor %}
             </section>
 {% endblock %}
 {% block aside %}
-            <aside class="right">
+            <!--<aside class="right">
                 <h1>Azken berriak</h1>
             </aside>
+-->
 
-           <!-- </div>-->
 {% endblock %}
 
 
