@@ -450,4 +450,6 @@ input:required, textarea:required {
 	width: 70%;
 	margin-bottom: 5px;
 }
-
+.letra-ikusi, .letra-ezkutatu {
+	cursor: pointer;
+}
