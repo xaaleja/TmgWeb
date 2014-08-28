@@ -10,8 +10,20 @@ html, body {
 	background: linear-gradient(to bottom, #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=0 ); */
 	  background: url("http://subtlepatterns.com/patterns/cloth_alike.png") repeat scroll 0% 0% transparent;
+}
+nav {
+	background: linear-gradient(#383838, #272727) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border-bottom: 1px solid #222;
+	width: 100%;
+	float: left;
+}
 
-
+hr {
+	border: 0; height: 1px;
+	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); }
 }
 
 h1 {
@@ -23,6 +35,8 @@ h2 {
 
 ul, ol{
 	list-style: none;
+	margin:0;
+	padding: 0;
 }
 
 a {
@@ -49,7 +63,7 @@ a:link, a:visited
 }
 
 .portada_argazkia{
-	width:900px;
+	width:100%;
 	height: 300px;
 }
 
@@ -73,7 +87,7 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 }
 
 #cabecera {
-	width:60em; position:relative; float:left; margin:2em 0 1em 0; min-height:175px;
+	width:56em; position:relative; float:left; margin:2em 0 1em 0; min-height:175px;
 }
 
 
@@ -83,7 +97,12 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	margin:2em 0 1em 0; min-height:80px;
 }*/
 #content {
-	width:56em; margin:3em 2em; position:relative; float:left; min-height:500px;
+	width:56em;
+	/*margin:3em 2em;*/
+	position:relative;
+	float:left;
+	min-height:500px;
+	margin-top: 1.5em;
 }
 
 #kontzertuak {
@@ -113,7 +132,7 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	height:150px;*/
 	clear:both;
 	margin:20px 0px;
-	background-color: #EEEEEE;
+	/*background-color: #EEEEEE;*/
     border-radius: 6px;
 }
 #berriak {
@@ -135,7 +154,7 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 .kontzertu{
 	margin:5px 0px;
 	padding-right: 10px;
-	background-color: #EEEEEE;
+	/*background-color: #EEEEEE;*/
     border-radius: 6px;
 	margin-bottom: 15px;
 	display:inline-block;
@@ -188,8 +207,8 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	margin:10px 0px;
 	padding-left: 10px;
 	padding-right: 10px;
-	background-color: #EEEEEE;
-    border-radius: 6px;
+	/*background-color: #EEEEEE;*/
+	border-radius: 6px;
 	margin-bottom: 10px;
 	clear: both;
 	display: inline-block;
@@ -286,28 +305,15 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	font-size: 10pt;
 }
 
-/*
-#access {
-	border-bottom: 1px solid #EEEEEE;
-	text-align:center;
-}
-
-
-#access ul li {display:inline-block;}
-#access ul li a { margin:0 8px; padding:3px 10px; display:block;}
-#access ul li a:link, #menu-ppal ul li a:visited{color:#FFF; background:#317E90;}
-#access ul li a:hover{color:#FFF; background:#304950;}
-*/
-
 .access {
 	margin-left: 0em;
 	margin-top: 0em;
 	font-size: 13pt;
-	width:60em;
+	width:56em;
 }
 
 .access li a {
-	background-color: #000;
+	/*background-color: #000;*/
 	color:#FFF;
 	text-decoration: none;
 	padding:10px 20px;
@@ -328,6 +334,7 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	min-width: 140px;
 	padding: 0px;
 	margin: 0px;
+	z-index: 1;
 }
 
 .access li:hover > ul {
@@ -340,7 +347,16 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 
 }
 #pie {
-	width:60em; position:relative; float:left;
+	width:56em;
+	position:relative;
+	float:left;
+	background: linear-gradient(#383838, #272727) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border-bottom: 1px solid #222;
+	color: #FFF;
+	margin-top: 3em;
+}
+#pie a {
+	color: #FFF;
 }
 
 #kontaktua h1 {
@@ -469,6 +485,13 @@ input:required, textarea:required {
 .berria-argazki img {
 	width: 150px;
 	height: 160px;
+	padding: 3px;
+	background: #000000;
+	border: 1px solid red;
+	box-shadow: 1px 1px 2px #000;
+}
+.berria-argazki img:hover {
+	border:1px solid #fff;
 }
 .berria-testua {
 	position: relative;
