@@ -1,40 +1,67 @@
 {% extends '::frontend.html.twig' %}
 {% block title %}{{'menu.hurrengoak' | trans}}{% endblock %}
 {% block article %}
-            <section id="kontzertuak">
-                    <h1>{{'menu.hurrengoak' | trans}}</h1>
-                    {% for kontzertua in kontzertuak %}
-                        <article class="kontzertu">
-                            <header>
-                                <h2 class="data-kontzertu">{{kontzertua.data |date("Y-m-d") }}</h2>
-                                <h3 class="lekua-kontzertu">{{kontzertua.lekua}} <a href={{kontzertua.esteka}}>webgunea</a></h3>
-                            </header>
-                            <article class="kontz">
-                                <!--{% for arga in kontzertua.argazkiak %}
-                                    <div class="img-kontzertu">
-                                        <img src="{{ asset(argazkien_direktorioa ~ arga.argazkia) }}"</img>
-                                    </div>
-                                {% endfor %}-->
-                                <div class="img-kontzertu">
-                                    {% if kontzertua.argazkiak is not empty %}
-                                        <img src="{{ asset(argazkien_direktorioa ~ kontzertua.argazkiak[0].argazkia) }}"></img>
-                                    {% endif %}
-                                </div>
-                                <div class="info-kontzertu">
-                                    <p>Beste taldeak: {{kontzertua.besteTaldeak}} </p>
-                                    <p>Ordua: {{kontzertua.ordua}} </p>
-                                    <p>Prezioa: {{kontzertua.sarrera}} €</p>
-                                </div>
-                            </article>
-                            <div class="gehiago-ikusi">
-                                Gehiago ikusi
+    <section id="kontzertuak">
+        <h1>{{'menu.hurrengoak' | trans}}</h1>
+        {% if kontzertuak is not empty %}
+            {% for kontzertua in kontzertuak %}
+                <article class="kontzertu">
+                    <!--<header>
+                        <h2 class="data-kontzertu">{{kontzertua.data |date("Y-m-d") }}</h2>
+                        <h3 class="lekua-kontzertu">{{kontzertua.lekua}} <a href={{kontzertua.esteka}}>webgunea</a></h3>
+                    </header>
+                    <article class="kontz">
+                        {% for arga in kontzertua.argazkiak %}
+                        <div class="img-kontzertu">
+                            <img src="{{ asset(argazkien_direktorioa ~ arga.argazkia) }}"</img>
+                        </div>
+                        {% endfor %}
+                        <div class="img-kontzertu">
+                            {% if kontzertua.argazkiak is not empty %}
+                                <img src="{{ asset(argazkien_direktorioa ~ kontzertua.argazkiak[0].argazkia) }}"></img>
+                            {% endif %}
+                        </div>
+                        <div class="info-kontzertu">
+                            <p>Beste taldeak: {{kontzertua.besteTaldeak}} </p>
+                            <p>Ordua: {{kontzertua.ordua}} </p>
+                            <p>Prezioa: {{kontzertua.sarrera}} €</p>
+                        </div>
+                    </article>
+                    <div class="gehiago-ikusi">
+                        Gehiago ikusi
+                    </div>
+                    <div class="gutxiago-ikusi" style="display: none">
+                        Gutxiago ikusi
+                    </div>-->
+                    <div class="kontz-ezk">
+                        <div class="data-kontzertu">
+                            <h2>{{kontzertua.data |date("Y-m-d") }}</h2>
+                        </div>
+                        <div class="img-kontzertu">
+                            {% if kontzertua.argazkiak is not empty %}
+                                <img src="{{ asset(argazkien_direktorioa ~ kontzertua.argazkiak[0].argazkia) }}"></img>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="kontz-esk">
+                        <h3 class="izena-kontzertu">{{kontzertua.izena}}</h3>
+                        <div class="info-kontzertu">
+                            <p>Beste taldeak: {{kontzertua.besteTaldeak}} </p>
+                            <p>Ordua: {{kontzertua.ordua}} </p>
+                            <p>Prezioa: {{kontzertua.sarrera}} €</p>
+                            <div class="kontz-oina">
+                                <a href={{kontzertua.esteka}}>Informazio gehiago</a>
                             </div>
-                            <div class="gutxiago-ikusi" style="display: none">
-                                Gutxiago ikusi
-                            </div>
-                        </article>
-                    {% endfor %}
-            </section>
+                        </div>
+                    </div>
+
+                </article>
+                <hr>
+            {% endfor %}
+        {% else %}
+            <i>Momentuz ez dago kontzerturik</i>
+        {% endif %}
+    </section>
 {% endblock %}
 {% block aside %}
             <!--<aside class="right">
