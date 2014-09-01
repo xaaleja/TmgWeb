@@ -80,8 +80,8 @@ class DefaultController extends Controller
     public function iragKontzertuakAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $kontzertuak = $em->getRepository('TaldeaBundle:Kontzertua')->findIraganekoKontzertuak();
-        return $this->render('TaldeaBundle:Default:iraganekoKontzertuak.html.twig', array('kontzertuak' => $kontzertuak));
+        $kontzertuak2011 = $em->getRepository('TaldeaBundle:Kontzertua')->find2011koKontzertuak();
+        return $this->render('TaldeaBundle:Default:iraganekoKontzertuak.html.twig', array('kontzertuak2011' => $kontzertuak2011));
     }
 
     public function kontaktuaAction()

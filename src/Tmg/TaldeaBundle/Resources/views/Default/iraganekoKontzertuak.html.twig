@@ -3,18 +3,18 @@
 {% block article %}
             <section id="kontzertuak">
                     <h1>{{'menu.iraganekoak' | trans}}</h1>
-                    {% for kontzertua in kontzertuak %}
+                    <!--{% for kontzertua in kontzertuak %}
                         <article class="kontzertu">
                             <header>
                                 <h2 class="data-kontzertu">{{kontzertua.data |date("Y-m-d") }}</h2>
                                 <h3 class="lekua-kontzertu">{{kontzertua.lekua}} <a href={{kontzertua.esteka}}>webgunea</a></h3>
                             </header>
                             <article class="kontz">
-                                <!-- {% for arga in kontzertua.argazkiak %}
+                                {% for arga in kontzertua.argazkiak %}
                                     <div class="img-kontzertu">
                                         <img src="{{ asset(argazkien_direktorioa ~ arga.argazkia) }}"</img>
                                     </div>
-                                {% endfor %} -->
+                                {% endfor %}
                                 <div class="img-kontzertu">
                                     <img src="{{ asset(argazkien_direktorioa ~ kontzertua.argazkiak[0].argazkia) }}"</img>
                                 </div>
@@ -31,7 +31,51 @@
                                 Gutxiago ikusi
                             </div>
                         </article>
-                    {% endfor %}
+                    {% endfor %}-->
+                        <!--<div id="kontz-2014">
+                            <h2>2014</h2>
+                            {% for kontzertua in kontzertuak2014 %}
+                                <ul>
+                                    <li>{{kontzertua.data | date("Y-m-d")}}</li>
+                                    <li>{{kontzertua.izena}}</li>
+                                    <li>{{kontzertua.besteTaldeak}}</li>
+                                </ul>
+                                <hr>
+                            {% endfor %}
+                        </div>
+                        <div id="kontz-2013">
+                            <h2>2013</h2>
+                            {% for kontzertua in kontzertuak2013 %}
+                                <ul>
+                                    <li>{{kontzertua.data | date("Y-m-d")}}</li>
+                                    <li>{{kontzertua.izena}}</li>
+                                    <li>{{kontzertua.besteTaldeak}}</li>
+                                </ul>
+                                <hr>
+                            {% endfor %}
+                        </div>
+                        <div id="kontz-2012">
+                        <h2>2012</h2>
+                            {% for kontzertua in kontzertuak2012 %}
+                                <ul>
+                                    <li>{{kontzertua.data | date("Y-m-d")}}</li>
+                                    <li>{{kontzertua.izena}}</li>
+                                    <li>{{kontzertua.besteTaldeak}}</li>
+                                </ul>
+                                <hr>
+                            {% endfor %}
+                        </div>-->
+                        <div id="kontz-2011">
+                            <h2>2011</h2>
+                            {% for kontzertua in kontzertuak2011 %}
+                                <ul>
+                                    <li>{{kontzertua.data | date("Y-m-d")}}</li>
+                                    <li>{{kontzertua.izena}}</li>
+                                    <li>{{kontzertua.besteTaldeak}}</li>
+                                </ul>
+                                <hr>
+                            {% endfor %}
+                        </div>
             </section>
 {% endblock %}
 {% block aside %}

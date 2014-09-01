@@ -47,6 +47,15 @@ a:link, a:visited
 	text-decoration:none;
 	color: #000;
 }
+.argazki-estiloa {
+	padding: 3px;
+	background: #000000;
+	border: 1px solid red;
+	box-shadow: 1px 1px 2px #000;
+}
+.argazki-estiloa:hover {
+	border:1px solid #fff;
+}
 #hizkuntzak {
 	position:relative;
 	float: left;
@@ -138,7 +147,7 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 }
 
 .data-kontzertu {
-	background-color: #000;
+	background-color: #383838;
 	color:red;
 	width:65%;
 
@@ -161,10 +170,6 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	width:135px;
 	height: 175px;
 	margin-left:3px;
-	padding: 3px;
-	background: #000000;
-	border: 1px solid red;
-	box-shadow: 1px 1px 2px #000;
 }
 .info-kontzertu{
 	margin-left: 0.25em;
@@ -500,13 +505,6 @@ input:required, textarea:required {
 .berria-argazki img {
 	width: 150px;
 	height: 160px;
-	padding: 3px;
-	background: #000000;
-	border: 1px solid red;
-	box-shadow: 1px 1px 2px #000;
-}
-.berria-argazki img:hover {
-	border:1px solid #fff;
 }
 .berria-testua {
 	position: relative;

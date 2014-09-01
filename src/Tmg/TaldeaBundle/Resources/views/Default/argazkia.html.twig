@@ -5,11 +5,11 @@
     <div id="galeria">
                 <h1>{{'galeria.kontzertuak' | trans}}</h1>
                 {% for kontzertua in kontzertuak %}
-                    <a href="{{ path('galeria_kontzertua', {'slug': kontzertua.slug}) }}"><img src="{{ asset(argazkien_direktorioa ~ kontzertua.argazkiak[0].argazkia) }}"</img></a>
+                    <a href="{{ path('galeria_kontzertua', {'slug': kontzertua.slug}) }}"><img class="argazki-estiloa" src="{{ asset(argazkien_direktorioa ~ kontzertua.argazkiak[0].argazkia) }}"</img></a>
                 {% endfor %}
                 <h1>{{'galeria.karatulak' | trans }}</h1>
                 {% for diska in diskak %}
-                    <a href="{{ path('galeria_diska', {'slug': diska.slug}) }}"><img src="{{ asset(argazkien_direktorioa ~ diska.argazkiak[0].argazkia) }}"</img></a>
+                    <a href="{{ path('galeria_diska', {'slug': diska.slug}) }}"><img class="argazki-estiloa" src="{{ asset(argazkien_direktorioa ~ diska.argazkiak[0].argazkia) }}"</img></a>
                 {% endfor %}
 
 
