@@ -120,8 +120,22 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	width:65%;
 }
 
-#kontzertuak  h1{
+#kontzertuak  h1, h2{
 	text-align: left;
+}
+.kontz-list {
+	margin-left: 1em;
+}
+.kontz-data {
+	background: #333;
+	color: #fff;
+	font-size: 18pt;
+}
+#kontz-2014-lista ul, #kontz-2013-lista ul, #kontz-2012-lista ul, #kontz-2011-lista ul {
+	margin-bottom: 1em;
+}
+#kontz-2014-lista ul li, #kontz-2013-lista ul li, #kontz-2012-lista ul li, #kontz-2011-lista ul li {
+	display: inline-block;
 }
 
 .kontz-ezk {
@@ -178,10 +192,6 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	margin-bottom: 1px;
 	margin-top: 1px;
 }
-/*.kontz{
-	clear:both;
-	display:none;
-}*/
 .kontz-oina {
 	font-size: 10pt;
 	text-align: left;
@@ -363,8 +373,9 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 
 .access li ul li a{
 	background-color: #CCC;
-	color: #000;
-
+}
+.acces ul li ul li a:hover {
+	color: #FFF;
 }
 #pie {
 	width:56em;

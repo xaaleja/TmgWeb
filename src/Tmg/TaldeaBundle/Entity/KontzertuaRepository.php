@@ -31,9 +31,10 @@ class KontzertuaRepository extends EntityRepository
         $em = $this->getEntityManager();
         $kontsulta = $em->createQuery('
         SELECT k FROM TaldeaBundle:Kontzertua k
-        WHERE k.data >= :gaur
+        WHERE k.data >= :lehenago AND k.data < :beranduago
         ORDER BY k.data');
-        $kontsulta->setParameter('gaur', new \DateTime());
+        $kontsulta->setParameter('lehenago', new \DateTime('2014-01-01'));
+        $kontsulta->setParameter('beranduago', new \DateTime('2015-01-01'));
         return $kontsulta->getResult();
     }
 
@@ -42,9 +43,10 @@ class KontzertuaRepository extends EntityRepository
         $em = $this->getEntityManager();
         $kontsulta = $em->createQuery('
         SELECT k FROM TaldeaBundle:Kontzertua k
-        WHERE k.data >= :gaur
+        WHERE k.data >= :lehenago AND k.data < :beranduago
         ORDER BY k.data');
-        $kontsulta->setParameter('gaur', new \DateTime());
+        $kontsulta->setParameter('lehenago', new \DateTime('2013-01-01'));
+        $kontsulta->setParameter('beranduago', new \DateTime('2014-01-01'));
         return $kontsulta->getResult();
     }
     public function find2012koKontzertuak()
@@ -52,9 +54,10 @@ class KontzertuaRepository extends EntityRepository
         $em = $this->getEntityManager();
         $kontsulta = $em->createQuery('
         SELECT k FROM TaldeaBundle:Kontzertua k
-        WHERE k.data >= :gaur
+        WHERE k.data >= :lehenago AND k.data < :beranduago
         ORDER BY k.data');
-        $kontsulta->setParameter('gaur', new \DateTime());
+        $kontsulta->setParameter('lehenago', new \DateTime('2012-01-01'));
+        $kontsulta->setParameter('beranduago', new \DateTime('2013-01-01'));
         return $kontsulta->getResult();
     }
     public function find2011koKontzertuak()

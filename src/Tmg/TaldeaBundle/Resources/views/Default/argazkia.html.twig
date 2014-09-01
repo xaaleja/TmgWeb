@@ -5,7 +5,9 @@
     <div id="galeria">
                 <h1>{{'galeria.kontzertuak' | trans}}</h1>
                 {% for kontzertua in kontzertuak %}
-                    <a href="{{ path('galeria_kontzertua', {'slug': kontzertua.slug}) }}"><img class="argazki-estiloa" src="{{ asset(argazkien_direktorioa ~ kontzertua.argazkiak[0].argazkia) }}"</img></a>
+                    {% if kontzertua.argazkiak is not empty %}
+                        <a href="{{ path('galeria_kontzertua', {'slug': kontzertua.slug}) }}"><img class="argazki-estiloa" src="{{ asset(argazkien_direktorioa ~ kontzertua.argazkiak[0].argazkia) }}"</img></a>
+                    {% endif %}
                 {% endfor %}
                 <h1>{{'galeria.karatulak' | trans }}</h1>
                 {% for diska in diskak %}

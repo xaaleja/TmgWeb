@@ -81,7 +81,11 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $kontzertuak2011 = $em->getRepository('TaldeaBundle:Kontzertua')->find2011koKontzertuak();
-        return $this->render('TaldeaBundle:Default:iraganekoKontzertuak.html.twig', array('kontzertuak2011' => $kontzertuak2011));
+        $kontzertuak2012 = $em->getRepository('TaldeaBundle:Kontzertua')->find2012koKontzertuak();
+        $kontzertuak2013 = $em->getRepository('TaldeaBundle:Kontzertua')->find2013koKontzertuak();
+        $kontzertuak2014 = $em->getRepository('TaldeaBundle:Kontzertua')->find2014koKontzertuak();
+        return $this->render('TaldeaBundle:Default:iraganekoKontzertuak.html.twig', array('kontzertuak2011' => $kontzertuak2011,
+            'kontzertuak2012' => $kontzertuak2012, 'kontzertuak2013' => $kontzertuak2013, 'kontzertuak2014' => $kontzertuak2014));
     }
 
     public function kontaktuaAction()
