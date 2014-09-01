@@ -30,10 +30,17 @@ $(document).ready(function() {
   $(".fancybox").fancybox();
 
   $(".kontz-urtea").on("click", function(){
-    $(".kontz-urtea").siblings().children().next().slideUp("slow");
-    $(this).children().next().slideDown("slow");
-    console.log($(this).children());
-    console.log($(this).siblings().children().next());
+    console.log($(this));
+    console.log($(this).children().next().css('display'));
+    if($(this).children().next().css('display') == 'none')
+    {
+      $(".kontz-urtea").siblings().children().next().slideUp("slow");
+      $(this).children().next().slideDown("slow");
+    }
+    else
+    {
+      $(this).children().next().slideUp("slow");
+    }
   });
 
 });
