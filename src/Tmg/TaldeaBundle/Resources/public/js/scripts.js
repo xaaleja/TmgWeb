@@ -30,7 +30,7 @@ $(document).ready(function() {
   $(".fancybox").fancybox();
 
   $(".kontz-urtea").on("click", function(){
-    $(".kontz-urtea").siblings().children().next().hide();
+    $(".kontz-urtea").siblings().children().next().slideUp("slow");
     $(this).children().next().slideDown("slow");
     console.log($(this).children());
     console.log($(this).siblings().children().next());
