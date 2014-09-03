@@ -23,7 +23,7 @@ hr {
 	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
 	background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
 	background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-	background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); }
+	background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
 }
 
 h1 {
@@ -136,6 +136,9 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	float:left;
 	width:65%;
 }
+#kontzertuak h1, h2 {
+	text-align: left;
+}
 
 .kontz-list {
 	margin-left: 1em;
@@ -144,6 +147,9 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	background: #333;
 	color: #fff;
 	font-size: 18pt;
+}
+.kontz-urtea {
+	margin-left: 1em;
 }
 #kontz-2014-lista ul, #kontz-2013-lista ul, #kontz-2012-lista ul, #kontz-2011-lista ul {
 	margin-bottom: 1em;
@@ -405,67 +411,6 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
    -webkit-border-radius: 15px;
 }
 
-#kontaktua input,
-#kontaktua select,
-#kontaktua textarea,
-#kontaktua label {
-   font-size: 15px;
-   margin-bottom: 2px;
-}
-
-#kontaktua input,
-#kontaktua select,
-#kontaktua textarea {
-   width: 60%;
-   background: #999;
-   border: 0;
-   -moz-border-radius: 5px;
-   -webkit-border-radius: 5px;
-   border-radius: 5px;
-   margin-bottom: 25px;
-   padding: 5px;
-}
-
-
-#kontaktua input:focus,
-#kontaktua select:focus,
-#kontaktua textarea:focus {
-   background-color: #E5E6E7;
-}
-
-#kontaktua textarea {
-   height: 150px;
-}
-
-
-#kontaktua #submit {
-   width: 150px;
-   border: none;
-   background-color: #E5E6E7;
-}
-
-#kontaktua #submit:hover {
-   background-color: #BFD7C1;
-   color: #6EA070;
-}
-
-input:required, textarea:required {
-   box-shadow: none;
-   -moz-box-shadow: none;
-   -webkit-box-shadow: none;
-   -o-box-shadow: none;
-}
-
-#kontaktua .required {
-   font-weight:bold;
-   color: #E5E6E7;
-}
-
-#failure, #success {
-   color: #6EA070;
-   display:none;
-}
-
 #galeria {
 	position:relative;
 	float:left;
@@ -528,13 +473,17 @@ input:required, textarea:required {
 .letra-ikusi, .letra-ezkutatu, .gehiago-ikusi, .gutxiago-ikusi {
 	cursor: pointer;
 }
+#kontaktua-form {
+	margin-left: 1em;
+}
 
-#kontaktua-form form { font-size: 16px; }
+
+#kontaktua-form form { font-size: 13pt; }
 #kontaktua-form div { clear: left; margin-bottom: 10px; }
-#kontaktua-form label { float: left; margin-right: 10px; text-align: right; width: 100px; font-weight: bold; vertical-align: top; padding-top: 10px; }
+#kontaktua-form label { float: left; margin-left: 0.5em; text-align: left; width: 100px; font-weight: bold; vertical-align: top; padding-top: 10px; }
 #kontaktua-form input[type="text"],
 #kontaktua-form input[type="email"]
     { width: 500px; line-height: 26px; font-size: 20px; min-height: 26px; }
 #kontaktua-form textarea { width: 500px; height: 150px; line-height: 26px; font-size: 20px; }
-#kontaktua-form input[type="submit"] { margin-left: 110px; width: 508px; line-height: 26px; font-size: 20px; min-height: 26px; }
+#kontaktua-form input[type="submit"] { width: 508px; line-height: 26px; font-size: 20px; min-height: 26px; }
 #kontaktua-form ul li { color: #ff0000; margin-bottom: 5px; }
