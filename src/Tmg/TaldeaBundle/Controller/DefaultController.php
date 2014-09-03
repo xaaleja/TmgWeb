@@ -4,8 +4,13 @@ namespace Tmg\TaldeaBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 
-use Tmg\TaldeaBundle\Entity\Kontzertua ;
+use Tmg\TaldeaBundle\Entity\Kontaktua;
+
+use Tmg\TaldeaBundle\Form\KontaktuaType;
+
+
 
 class DefaultController extends Controller
 {
@@ -43,7 +48,9 @@ class DefaultController extends Controller
 
     public function bideoakAction()
     {
-        return $this->render('TaldeaBundle:Default:bideoa.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $bideoak = $em->getRepository('TaldeaBundle:Bideoa')->findAll();
+        return $this->render('TaldeaBundle:Default:bideoa.html.twig', array('bideoak' => $bideoak));
     }
     public function argazkiakAction()
     {
@@ -90,7 +97,32 @@ class DefaultController extends Controller
 
     public function kontaktuaAction()
     {
-        return $this->render('TaldeaBundle:Default:kontaktua.html.twig');
+        //return $this->render('TaldeaBundle:Default:kontaktua.html.twig');
+
+        $kontaktua = new Kontaktua();
+        $form = $this->createForm(new KontaktuaType(), $kontaktua);
+
+        $request = $this->getRequest();
+        if ($request->getMethod() == 'POST') {
+            $form->bind($request);
+
+            if ($form->isValid()) {
+
+                $message = \Swift_Message::newInstance()
+                    ->setSubject($kontaktua->getGaia())
+                    ->setTo('tommygun.santurtzi@gmail.com')
+                    ->setFrom($kontaktua->getEmaila())
+                    ->setBody($kontaktua->getIzena().'(e)k, email helbidea '.$kontaktua->getEmaila().' duena hurrengo mezu hau'.
+                         ' bidali dizu: '.$kontaktua->getMezua());
+                $this->get('mailer')->send($message);
+
+                return $this->redirect($this->generateUrl('kontaktua'));
+            }
+        }
+
+        return $this->render('TaldeaBundle:Default:kontaktua.html.twig', array(
+            'form' => $form->createView()
+        ));
     }
 
     public function galeriaDiskaAction($slug)

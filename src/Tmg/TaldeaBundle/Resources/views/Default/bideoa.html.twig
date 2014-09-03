@@ -4,10 +4,12 @@
     <!--<div id="portada">-->
     <div id="bideoa">
         <h1>{{'menu.bideoak' | trans}}</h1>
-        <div class="bid">
-            <!--<iframe id="bideoa" src="//www.youtube.com/embed/Piwy7i2lCWY?list=UUpSbd1P9_CMYGvRW0Ls8kzw" ></iframe>-->
-            <iframe width="560" height="480" src="//www.youtube.com/embed/PdPBK5Vb0pA" frameborder="0" allowfullscreen></iframe>
-        </div>
+        {% for bideoa in bideoak %}
+            <div class="bid">
+                <!--<iframe id="bideoa" src="//www.youtube.com/embed/Piwy7i2lCWY?list=UUpSbd1P9_CMYGvRW0Ls8kzw" ></iframe>-->
+                <iframe width="560" height="480" src={{bideoa.esteka}} frameborder="0" allowfullscreen></iframe>
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}
 {% block aside %}

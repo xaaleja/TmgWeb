@@ -10,7 +10,7 @@
                             <h3>{{berria.data | date("Y-m-d")}}</h3>
                         </header>
                             <div class="berria-argazki">
-                                <img class="argazki-estiloa" src="{{ asset(argazkien_direktorioa ~ berria.argazkiak[0].argazkia) }}"></img>
+                                <a href="{{ asset(argazkien_direktorioa ~ berria.argazkiak[0].argazkia) }}"><img class="argazki-estiloa" src="{{ asset(argazkien_direktorioa ~ berria.argazkiak[0].argazkia) }}"></img></a>
                             </div>
                             <div class="berria-testua">
                                 <p>{{berria.testua}}</p>

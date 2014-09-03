@@ -3,22 +3,20 @@
 {% block article %}
         <article id="kontaktua">
             <h1>{{'menu.kontaktua' | trans}}</h1>
-            <form method="post" action="">
-              <ul id="form-kontaktua">
-                    <li><label for="izena">{{'kontaktua.izena' | trans}}: <span class="required">*</span></label></li>
-                    <li><input type="text" id="izena" name="izena" value="" placeholder="{{'kontaktua.zureizena' | trans}}" required="required" autofocus="autofocus" /></li>
-                    <li><label for="emaila">{{'kontaktua.emaila' | trans}}: <span class="required">*</span></label></li>
-                    <li><input type="email" id="emaila" name="emaila" value="" placeholder="{{'kontaktua.zureemaila' | trans}}" required="required" /></li>
+            <div id="kontaktua-form">
+                <form action="{{ path('kontaktua') }}" method="post" {{ form_enctype(form) }} class="kontak-form">
+                    {{ form_errors(form) }}
 
-                    <li><label for="gaia">{{'kontaktua.gaia' | trans}}: </label></li>
-                    <li><textarea id="gaia" name="gaia" placeholder="{{'kontaktua.zuregaia' | trans}}" required="required"></textarea></li>
+                    {{ form_row(form.izena) }}
+                    {{ form_row(form.emaila) }}
+                    {{ form_row(form.gaia) }}
+                    {{ form_row(form.mezua) }}
 
-                    <li><label for="mezua">{{'kontaktua.mezua' | trans}}: <span class="required">*</span></label></li>
-                    <li><textarea id="mezua" name="mezua" placeholder="{{'kontaktua.zuremezua' | trans}}" required="required"></textarea></li>
+                    {{ form_rest(form) }}
 
-                    <li><input type="submit" value="{{'kontaktua.bidali' | trans}}" id="submit" /></li>
-              </ul>
-            </form>
+                    <input type="submit" value="{{'kontaktua.bidali' | trans}}" />
+                </form>
+            </div>
 
         </article>
 {% endblock %}

@@ -43,3 +43,5 @@ iraganeko_kontzertuak:
 kontaktua:
     pattern: /kontaktua
     defaults: { _controller:TaldeaBundle:Default:kontaktua }
+    requirements:
+        _method: GET|POST

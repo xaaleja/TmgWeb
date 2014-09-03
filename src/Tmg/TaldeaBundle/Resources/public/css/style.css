@@ -47,6 +47,23 @@ a:link, a:visited
 	text-decoration:none;
 	color: #000;
 }
+
+#pie {
+	width:56em;
+	position:relative;
+	float:left;
+	background: linear-gradient(#383838, #272727) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border-bottom: 1px solid #222;
+	color: #FFF;
+	margin-top: 3em;
+}
+#pie a {
+	color: #FFF;
+}
+#pie h2 {
+	text-align: center;
+}
+
 .argazki-estiloa {
 	padding: 3px;
 	background: #000000;
@@ -120,9 +137,6 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	width:65%;
 }
 
-#kontzertuak  h1, h2{
-	text-align: left;
-}
 .kontz-list {
 	margin-left: 1em;
 }
@@ -149,7 +163,7 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	width:60%;
 }
 
-.kontzertu{
+.kontzertu {
 	margin:5px 0px;
 	padding-right: 10px;
 	/*background-color: #EEEEEE;
@@ -377,18 +391,6 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 .acces ul li ul li a:hover {
 	color: #FFF;
 }
-#pie {
-	width:56em;
-	position:relative;
-	float:left;
-	background: linear-gradient(#383838, #272727) repeat scroll 0 0 rgba(0, 0, 0, 0);
-	border-bottom: 1px solid #222;
-	color: #FFF;
-	margin-top: 3em;
-}
-#pie a {
-	color: #FFF;
-}
 
 #kontaktua h1 {
 	text-align: left;
@@ -526,3 +528,13 @@ input:required, textarea:required {
 .letra-ikusi, .letra-ezkutatu, .gehiago-ikusi, .gutxiago-ikusi {
 	cursor: pointer;
 }
+
+#kontaktua-form form { font-size: 16px; }
+#kontaktua-form div { clear: left; margin-bottom: 10px; }
+#kontaktua-form label { float: left; margin-right: 10px; text-align: right; width: 100px; font-weight: bold; vertical-align: top; padding-top: 10px; }
+#kontaktua-form input[type="text"],
+#kontaktua-form input[type="email"]
+    { width: 500px; line-height: 26px; font-size: 20px; min-height: 26px; }
+#kontaktua-form textarea { width: 500px; height: 150px; line-height: 26px; font-size: 20px; }
+#kontaktua-form input[type="submit"] { margin-left: 110px; width: 508px; line-height: 26px; font-size: 20px; min-height: 26px; }
+#kontaktua-form ul li { color: #ff0000; margin-bottom: 5px; }
