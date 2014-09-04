@@ -136,7 +136,7 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	float:left;
 	width:65%;
 }
-#kontzertuak h1, h2 {
+#kontzertuak h1, #kontzertuak h2 {
 	text-align: left;
 }
 
@@ -146,7 +146,9 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 .kontz-data {
 	background: #333;
 	color: #fff;
-	font-size: 18pt;
+	font-size: 14pt;
+	padding: 4px;
+	border-radius: 6px;
 }
 .kontz-urtea {
 	margin-left: 1em;
@@ -485,5 +487,5 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 #kontaktua-form input[type="email"]
     { width: 500px; line-height: 26px; font-size: 20px; min-height: 26px; }
 #kontaktua-form textarea { width: 500px; height: 150px; line-height: 26px; font-size: 20px; }
-#kontaktua-form input[type="submit"] { width: 508px; line-height: 26px; font-size: 20px; min-height: 26px; }
+#kontaktua-form input[type="submit"] { float:right; margin-right: 60px; width: 150px; line-height: 26px; font-size: 20px; min-height: 26px; }
 #kontaktua-form ul li { color: #ff0000; margin-bottom: 5px; }
