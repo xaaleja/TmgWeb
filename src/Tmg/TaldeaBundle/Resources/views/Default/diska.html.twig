@@ -2,37 +2,37 @@
 {% block title %}{{diska.izena}}{% endblock %}
 {% block article %}
     <article id="diska">
-        <h1>{{diska.izena}} ({{diska.data | date("Y-m-d")}})</h1>
         <div id="karatula">
-            <!--{% for argazkia in diska.argazkiak %}
-                <img class="cover" src="{{ asset(argazkien_direktorioa ~ argazkia.argazkia) }}"></img>
-            {% endfor %}-->
             <!-- Por hacer que al pinchar en la caratula salga la galería y veas la portada y la contraportada -->
             <img class="argazki-estiloa" src="{{ asset(argazkien_direktorioa ~ diska.argazkiak[0].argazkia) }}"></img>
         </div>
         <div id="info-diska">
-                    <ul>
-                        {% for abestia in abestiak %}
+            <h1>{{diska.izena}}</h1>
+            <ul>
+                <li>{{diska.data | date("Y-m-d")}}-ean argitaratua.</li>
+                <li>{{diska.disketxea}}</li>
+                <li>{{diska.iraupena}}</li>
+            </ul>
+        </div>
+        <div id="abestiak-diska">
+            <ul>
+                {% for abestia in abestiak %}
+                    <li>
+                        <ul>
+                            <li>{{loop.index}}. {{abestia.izena}} {{abestia.iraupena}} </li>
                             <li>
-                                <ul>
-                                    <li>{{loop.index}}. {{abestia.izena}} {{abestia.iraupena}} </li>
-                                    <li>
-                                        <div class="letra-ikusi">
-                                            Ge
-                                        </div>
-                                        <div class="letra-ezkutatu" style="display: none">
-                                            Gu
-                                        </div>
-                                    </li>
-                                </ul>
+                                <div class="letra-ikusi">Ge</div>
+                                <div class="letra-ezkutatu" style="display: none">Gu</div>
                             </li>
-                            <li>
-                                <div id="letra">
-                                    <p>{{abestia.letra}}</p>
-                                </div>
-                            </li>
-                        {% endfor %}
-                    </ul>
+                        </ul>
+                    </li>
+                    <li>
+                        <div id="letra">
+                            <p>{{abestia.letra}}</p>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
 
     </article>

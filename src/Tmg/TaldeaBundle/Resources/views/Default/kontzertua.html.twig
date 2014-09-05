@@ -12,7 +12,7 @@
                         </div>
                         <div class="img-kontzertu">
                             {% if kontzertua.argazkiak is not empty %}
-                                <img class="argazki-estiloa" src="{{ asset(argazkien_direktorioa ~ kontzertua.argazkiak[0].argazkia) }}"></img>
+                                <a href={{ asset(argazkien_direktorioa ~ kontzertua.argazkiak[0].argazkia) }}><img class="argazki-estiloa" src="{{ asset(argazkien_direktorioa ~ kontzertua.argazkiak[0].argazkia) }}"></img></a>
                             {% endif %}
                         </div>
                     </div>

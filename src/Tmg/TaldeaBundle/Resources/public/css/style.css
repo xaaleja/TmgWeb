@@ -312,7 +312,9 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 }
 #diska h1 {
 	text-align: left;
-	font-size: 18pt;
+	font-size: 20pt;
+	margin-top:0.25em;
+	margin-bottom: 0.25em;
 }
 #karatula{
 	position:relative;
@@ -331,6 +333,9 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	float: right;
 }
 #info-diska ul {
+	margin-left: 1em;
+}
+#abestiak-diska ul {
 	padding-right: 0px;
 	padding-left: 0px;
 	padding-bottom: 0px;
@@ -348,7 +353,7 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	float:left;
 	margin-right: 3px;
 }*/
-#info-diska ul li ul li {
+#abestiak-diska ul li ul li {
 	display: inline-block;
 }
 #letra{
