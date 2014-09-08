@@ -320,6 +320,7 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	position:relative;
 	float:left;
 	width: 45%;
+	margin-bottom: 5px;
 }
 #karatula img{
 	width:230px;
@@ -331,8 +332,13 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	position: relative;
 	width: 55%;
 	float: right;
+	min-height: 260px;
 }
 #info-diska ul {
+	margin-left: 1em;
+}
+#abestiak-diska {
+	float:left;
 	margin-left: 1em;
 }
 #abestiak-diska ul {
