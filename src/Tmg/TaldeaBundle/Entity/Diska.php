@@ -32,6 +32,9 @@ class Diska
     /** @ORM\Column(type="string", length=100) */
     private $disketxea;
 
+    /** @ORM\Column(type="text") */
+    private $testua;
+
     /**
      * @ORM\OneToMany(targetEntity="Argazkia", mappedBy="diska", cascade={"remove"})
      * @ORM\JoinColumn(name="id", referencedColumnName="diska", onDelete="CASCADE")
@@ -113,6 +116,17 @@ class Diska
     {
         $this->argazkiak = $argazkiak;
     }
+
+    public function getTestua()
+    {
+        return $this->testua;
+    }
+
+    public function setTestua($testua)
+    {
+        $this->testua = $testua;
+    }
+
 
     /*public function getAbestiak()
     {

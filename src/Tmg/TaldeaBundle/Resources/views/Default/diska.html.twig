@@ -4,15 +4,18 @@
     <article id="diska">
         <div id="karatula">
             <!-- Por hacer que al pinchar en la caratula salga la galería y veas la portada y la contraportada -->
-            <img class="argazki-estiloa" src="{{ asset(argazkien_direktorioa ~ diska.argazkiak[0].argazkia) }}"></img>
+            <img id="karatula-img" class="argazki-estiloa" src="{{ asset(argazkien_direktorioa ~ diska.argazkiak[0].argazkia) }}"></img>
+            <!--<span><img class="ikonoak" src="{{ asset(argazkien_direktorioa ~ "ikonoak/down53.png") }}"></img></span>-->
+            <span><img class="ikonoak" src="{{ asset(argazkien_direktorioa ~ "ikonoak/download7.png") }}"></img></span>
         </div>
         <div id="info-diska">
             <h1>{{diska.izena}}</h1>
-            <ul>
+            <!--<ul>
                 <li>{{diska.data | date("Y-m-d")}}-ean argitaratua.</li>
                 <li>{{diska.disketxea}}</li>
                 <li>{{diska.iraupena}}</li>
-            </ul>
+            </ul>-->
+            <p>{{diska.testua}}</p>
         </div>
         <div id="abestiak-diska">
             <ul>
