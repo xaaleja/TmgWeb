@@ -1,15 +1,6 @@
 html, body {
 	font-family: Arial,Helvetica,sans-serif;
-	/*background: #f2f5f6;
-	background: -moz-linear-gradient(top, #f2f5f6 0%, #e3eaed 37%, #c8d7dc 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f5f6), color-stop(37%,#e3eaed),
-		color-stop(100%,#c8d7dc));
-	background: -webkit-linear-gradient(top, #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%);
-	background: -o-linear-gradient(top, #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%);
-	background: -ms-linear-gradient(top, #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%);
-	background: linear-gradient(to bottom, #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=0 ); */
-	  background: url("http://subtlepatterns.com/patterns/cloth_alike.png") repeat scroll 0% 0% transparent;
+	background: url("http://subtlepatterns.com/patterns/cloth_alike.png") repeat scroll 0% 0% transparent;
 }
 nav {
 	background: linear-gradient(#383838, #272727) repeat scroll 0 0 rgba(0, 0, 0, 0);
@@ -163,12 +154,12 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 .kontz-ezk {
 	position: relative;
 	float:left;
-	width:40%;
+	width:35%;
 }
 .kontz-esk {
 	position: relative;
 	float:right;
-	width:60%;
+	width:65%;
 }
 
 .kontzertu {
@@ -185,7 +176,7 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 .data-kontzertu {
 	background-color: #383838;
 	color:red;
-	width:65%;
+	width:72%;
 
 }
 .data-kontzertu h2 {
@@ -208,7 +199,7 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	margin-left:3px;
 }
 .info-kontzertu{
-	margin-left: 0.25em;
+	margin-left: 0.5em;
 }
 .info-kontzertu p {
 	margin-bottom: 1px;
@@ -316,6 +307,9 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	margin-top:0em;
 	margin-bottom: 0em;
 }
+#karatula-info {
+	min-height: 320px;
+}
 #karatula{
 	position:relative;
 	float:left;
@@ -330,6 +324,7 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 }
 .ikonoak {
 	margin-top: 1em;
+	margin-left: 0.5em;
 }
 #info-diska{
 	position: relative;
@@ -345,7 +340,10 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 }
 #abestiak-diska {
 	float:left;
-	margin-left: 1em;
+}
+#abestiak-diska h2 {
+	text-align: left;
+	margin-bottom: 0.5em;
 }
 #abestiak-diska ul {
 	padding-right: 0px;
@@ -353,18 +351,9 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	padding-bottom: 0px;
 	padding-top: 0px;
 	margin: 0px;
+	margin-left: 0.5em;
 }
-/*#info-diska ul {
-   padding-right: 0px;
-   padding-left: 0px;
-   padding-bottom: 0px;
-   padding-top: 0px;
-   margin: 0px;
-}
-#info-diska > ul li ul li {
-	float:left;
-	margin-right: 3px;
-}*/
+
 #abestiak-diska ul li ul li {
 	display: inline-block;
 }
@@ -372,8 +361,12 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	clear:both;
 	display:none;
 	font-size: 10pt;
+	margin-left: 2em;
+	background-color: #383838;
+	color: #fff;
+	padding: 10px;
+	border-radius: 4px;
 }
-
 .access {
 	margin-left: 0em;
 	margin-top: 0em;
