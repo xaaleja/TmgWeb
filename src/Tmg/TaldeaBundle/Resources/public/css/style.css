@@ -145,6 +145,16 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 .kontz-urtea {
 	margin-left: 1em;
 }
+.urtea {
+	background-color: #383838;
+	color: #fff;
+	border-radius: 6px;
+
+}
+.urtea:hover {
+	background-color: #ccc;
+	color:#000;
+}
 #kontz-2014-lista ul, #kontz-2013-lista ul, #kontz-2012-lista ul, #kontz-2011-lista ul {
 	margin-bottom: 1em;
 }
