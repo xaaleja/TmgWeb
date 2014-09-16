@@ -128,10 +128,12 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	float:left;
 	width:65%;
 }
-#kontzertuak h1, #kontzertuak h2 {
+#kontzertuak h1  {
 	text-align: left;
 }
-
+#kontzertuak h2 {
+	text-align: left;
+}
 .kontz-list {
 	margin-left: 1em;
 }
@@ -147,13 +149,17 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 }
 .urtea {
 	background-color: #383838;
-	color: #fff;
-	border-radius: 6px;
-
+	color: red;
+	border-radius: 2px;
 }
 .urtea:hover {
 	background-color: #ccc;
-	color:#000;
+	color:red;
+}
+.urtea h2 {
+	text-align: left;
+	margin-left: 0.5em;
+	cursor: pointer;
 }
 #kontz-2014-lista ul, #kontz-2013-lista ul, #kontz-2012-lista ul, #kontz-2011-lista ul {
 	margin-bottom: 1em;
@@ -335,7 +341,11 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 }
 .ikonoak {
 	margin-top: 1em;
-	margin-left: 0.5em;
+	margin-left: 1.5em;
+	cursor: pointer;
+}
+.ikonoak:hover {
+	opacity: 0.6;
 }
 #info-diska{
 	position: relative;
