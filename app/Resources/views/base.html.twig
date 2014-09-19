@@ -5,25 +5,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>{% block title %}{% endblock %} | Tommy Gun</title>
         {% block stylesheets %}{% endblock %}
-        {% block javascripts %}
-            <script type="text/javascript" src="{{ asset('bundles/taldea/js/jquery-1.11.0.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/taldea/js/jquery-2.1.0.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/taldea/js/scripts.js') }}"></script>
-
-            <script type="text/javascript" src="{{ asset('bundles/taldea/source/jquery.fancybox.pack.js') }}"></script>
-        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
-    <body id="{% block id '' %}"><div id="container">
-        {% block body %}{% endblock %}
-        <footer id="pie">
-            <!--<h2>TMG</h2>-->
-            <span>&copy; {{ 'now' | date('Y') }} - Tommy Gun</span>
-            <!--<a href="{{ path('orrialde_estatikoa', { 'orrialdea': 'laguntza' }) }}">Laguntza</a>
-            <a href="{{ path('orrialde_estatikoa', { 'orrialdea': 'pribatutasuna' }) }}">Pribatutasuna</a>
-            <a href="{{ path('orrialde_estatikoa', { 'orrialdea': 'guri-buruz' }) }}">Guri buruz</a>-->
-            <span>Emaila: tommygun.santurtzi@gmail.com // </span>
-            <span><a href="{{ path('kontaktua') }}">{{ 'menu.kontaktua' | trans}}</a></span>
-        </footer>
-    </div></body>
+    <body id="{% block id '' %}">
+        <div id="container">
+            {% block body %}{% endblock %}
+            <footer id="pie">
+                <!--<h2>TMG</h2>-->
+                <span>&copy; {{ 'now' | date('Y') }} - Tommy Gun</span>
+                <!--<a href="{{ path('orrialde_estatikoa', { 'orrialdea': 'laguntza' }) }}">Laguntza</a>
+                <a href="{{ path('orrialde_estatikoa', { 'orrialdea': 'pribatutasuna' }) }}">Pribatutasuna</a>
+                <a href="{{ path('orrialde_estatikoa', { 'orrialdea': 'guri-buruz' }) }}">Guri buruz</a>-->
+                <span>Emaila: tommygun.santurtzi@gmail.com // </span>
+                <span><a href="{{ path('kontaktua') }}">{{ 'menu.kontaktua' | trans}}</a></span>
+            </footer>
+        </div>
+    </body>
+    {% block javascripts %}
+        <script type="text/javascript" src="{{ asset('bundles/taldea/js/jquery-1.11.0.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/taldea/js/jquery-2.1.0.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/taldea/js/scripts.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/taldea/source/jquery.fancybox.pack.js') }}"></script>
+    {% endblock %}
 </html>
