@@ -35,6 +35,15 @@ class Diska
     /** @ORM\Column(type="text") */
     private $testua;
 
+    /** @ORM\Column(type="string", length=100) */
+    private $bandcamp;
+
+    /** @ORM\Column(type="string", length=100) */
+    private $download;
+
+    /** @ORM\Column(type="string", length=100) */
+    private $youtube;
+
     /**
      * @ORM\OneToMany(targetEntity="Argazkia", mappedBy="diska", cascade={"remove"})
      * @ORM\JoinColumn(name="id", referencedColumnName="diska", onDelete="CASCADE")
@@ -128,14 +137,34 @@ class Diska
     }
 
 
-    /*public function getAbestiak()
+    public function getBandcamp()
     {
-        return $this->abestiak;
+        return $this->bandcamp;
     }
 
-    public function setAbestiak($abestiak)
+    public function setBancamp($bandcamp)
     {
-        $this->abestiak = $abestiak;
-    }*/
+        $this->bandcamp = $bandcamp;
+    }
+
+    public function getYoutube()
+    {
+        return $this->youtube;
+    }
+
+    public function setYoutube($youtube)
+    {
+        $this->youtube = $youtube;
+    }
+
+    public function getDownload()
+    {
+        return $this->download;
+    }
+
+    public function setDownload($download)
+    {
+        $this->download = $download;
+    }
 
 }
