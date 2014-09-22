@@ -10,6 +10,7 @@
                 <span><a href={{diska.download}}><img class="ikonoak" src="{{ asset(argazkien_direktorioa ~ "ikonoak/download7.png") }}"></img></a></span>
                 <span><a href={{diska.bandcamp}}><img class="ikonoak" src="{{ asset(argazkien_direktorioa ~ "ikonoak/bc.png") }}"></img></a></span>
                 <span><a href={{diska.youtube}}><img class="ikonoak" src="{{ asset(argazkien_direktorioa ~ "ikonoak/youtube3.png") }}"></img></a></span>
+                <span><a href="{{ path('galeria_diska', {'slug': diska.slug}) }}"><img class="ikonoak" src="{{ asset(argazkien_direktorioa ~ "ikonoak/images.png") }}"></img></a></span>
             </div>
             <div id="info-diska">
                 <h1>{{diska.izena}} ({{diska.data | date("Y")}})</h1>
