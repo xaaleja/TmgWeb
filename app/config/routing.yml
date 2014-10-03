@@ -1,14 +1,17 @@
 taldea:
     resource: "@TaldeaBundle/Resources/config/routing.yml"
     prefix:   /{_locale}
+    type: be_simple_i18n
     requirements:
         _locale: eu|es|en
-
+index:
+    pattern: /
+    defaults: { _controller:TaldeaBundle:Default:index}
 taldea_laguntza:
     pattern: /laguntza
     defaults: { _controller: TaldeaBundle:Default:laguntza}
 orrialde_estatikoa:
     pattern: /{_locale}/lekua/{orrialdea}/
-    defaults: { _controller: TaldeaBundle:Lekua:estatikoa}
+    defaults: { _controller: TaldeaBundle:Lekua:estatikoa, _locale:eu}
     requirements:
         _locale: eu|es|en

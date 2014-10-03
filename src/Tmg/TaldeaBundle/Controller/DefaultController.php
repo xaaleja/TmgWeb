@@ -14,6 +14,11 @@ use Tmg\TaldeaBundle\Form\KontaktuaType;
 
 class DefaultController extends Controller
 {
+    public function indexAction()
+    {
+        return $this->redirect($this->generateUrl('portada'));
+    }
+
     public function laguntzaAction()
     {
         return $this->render('TaldeaBundle:Default:laguntza.html.twig');

@@ -3,45 +3,58 @@ taldea_homepage:
     defaults: { _controller: TaldeaBundle:Default:index }
 portada:
     pattern: /
-    defaults: { _controller: TaldeaBundle:Default:portada }
+    defaults: { _controller: TaldeaBundle:Default:portada}
 kontzertuak:
     pattern: /kontzertuak
+    locales: { eu: /kontzertuak, en: /shows, es: /conciertos }
     defaults: { _controller:TaldeaBundle:Default:kontzertuak }
 diskografia:
     pattern: /diskografia
+    locales: { eu: /diskografia, en: /discography, es: /discografía }
     defaults: { _controller:TaldeaBundle:Default:diskografia }
 biografia:
     pattern: /biografia
+    locales: { eu: /biografia, en: /biography, es: /biografía }
     defaults: { _controller:TaldeaBundle:Default:biografia }
 bideoak:
     pattern: /bideoak
+    locales: { eu: /bideoak, en: /videos, es: /videos }
     defaults: { _controller:TaldeaBundle:Default:bideoak }
 argazkiak:
     pattern: /argazkiak
+    locales: { eu: /argazkiak, en: /photos, es: /fotos }
     defaults: { _controller:TaldeaBundle:Default:argazkiak }
 galeria_kontzertua:
     pattern: /argazkiak/kontzertua/{slug}
+    locales: { eu: "/argazkiak/kontzertua/{slug}", en: "/photos/shows/{slug}", es: "/fotos/conciertos/{slug}" }
     defaults: { _controller:TaldeaBundle:Default:galeriaKontzertua }
 galeria_diska:
     pattern: /argazkiak/diska/{slug}
+    locales: { eu: "/argazkiak/diska/{slug}", en: "/photos/disc/{slug}", es: "/fotos/disco/{slug}" }
     defaults: { _controller:TaldeaBundle:Default:galeriaDiska }
 galeria_bestelakoa:
     pattern: /argazkiak/{slug}
+    locales: { eu: "/argazkiak/{slug}", en: "/photos/{slug}", es: "/fotos/{slug}" }
     defaults: { _controller:TaldeaBundle:Default:galeriaBestelakoa }
 denda:
     pattern: /denda
+    locales: { eu: /denda, en: /store, es: /tienda }
     defaults: { _controller:TaldeaBundle:Default:denda }
 berria:
     pattern: /berria/{id}
+    locales: { eu: "/berria/{id}", en: "/news/{id}", es: "/noticia/{id}" }
     defaults: { _controller:TaldeaBundle:Default:berria }
 diska:
     pattern: /diskografia/{id}
+    locales: { eu: "/diskografia/{id}", en: "/discography/{id}", es: "/discografía/{id}" }
     defaults: { _controller:TaldeaBundle:Default:diska}
 iraganeko_kontzertuak:
     pattern: /iraganekoKontzertuak
+    locales: { eu: /iraganekoKontzertuak, en: /pastShows, es: /conciertosAnteriores }
     defaults: { _controller:TaldeaBundle:Default:iragKontzertuak }
 kontaktua:
     pattern: /kontaktua
+    locales: { eu: /kontaktua, en: /contact, es: /contacto }
     defaults: { _controller:TaldeaBundle:Default:kontaktua }
     requirements:
         _method: GET|POST
