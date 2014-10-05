@@ -38,6 +38,11 @@ a:link, a:visited
 	text-decoration:none;
 	color: #000;
 }
+#bloke-nagusia {
+	position:relative;
+	float:left;
+	width:65%;
+}
 
 #pie {
 	width:56em;
@@ -111,20 +116,6 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 
 }
 
-@media screen and (max-width: 500px) {
-	body{background:#000;}
-	h1{color:yellow;}
-	h2{color:yellow;}
-	.dropdown{color:yellow;}
-}
-
-@media screen and (min-width: 501px) and (max-width: 800px) {
-	body{background:grey;}
-	h1{color:green;}
-	h2{color:green;}
-	.dropdown{color:green;}
-}
-
 #cabecera {
 	width:56em; position:relative; float:left; margin:2em 0 1em 0; min-height:175px;
 }
@@ -145,9 +136,7 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 }
 
 #kontzertuak {
-	position:relative;
-	float:left;
-	width:65%;
+
 }
 #kontzertuak h1  {
 	text-align: left;
@@ -275,9 +264,7 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
     border-radius: 6px;
 }
 #berriak {
-	position:relative;
-	float:left;
-	width:65%;
+
 }
 
 #berriak h1 {
@@ -320,15 +307,9 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 }
 
 #berria{
-	position:relative;
-	float:left;
-	width:65%;
 	margin-top: 20px;
 }
 #biografia{
-	position:relative;
-	float:left;
-	width:65%;
 }
 #biografia h1{
 	text-align: left;
@@ -337,9 +318,6 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	text-align: left;
 }
 #diska {
-	position:relative;
-	float:left;
-	width:65%;
 	margin-top: 25px;
 }
 #diska h1 {
@@ -412,14 +390,14 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	padding: 10px;
 	border-radius: 4px;
 }
-.access {
+#access {
 	margin-left: 0em;
 	margin-top: 0em;
 	font-size: 13pt;
 	width:56em;
 }
 
-.access li a {
+#access li a {
 	/*background-color: #000;*/
 	color:#FFF;
 	text-decoration: none;
@@ -427,15 +405,15 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	display: block;
 }
 
-.access li a:hover {
+#access li a:hover {
 	background-color:#434343;
 }
 
-.access > li {
+#access > li {
 	float:left;
 }
 
-.access li ul {
+#access li ul {
 	display: none;
 	position: absolute;
 	min-width: 140px;
@@ -444,14 +422,14 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	z-index: 1;
 }
 
-.access li:hover > ul {
+#access li:hover > ul {
 	display: block;
 }
 
-.access li ul li a{
+#access li ul li a{
 	background-color: #CCC;
 }
-.acces ul li ul li a:hover {
+#acces ul li ul li a:hover {
 	color: #FFF;
 }
 
@@ -460,18 +438,13 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 }
 
 #kontaktua {
-	width: 65%;
-	float: left;
-	position: relative;
     border-radius: 15px;
    -moz-border-radius: 15px;
    -webkit-border-radius: 15px;
 }
 
 #galeria {
-	position:relative;
-	float:left;
-	width:65%;
+
 }
 
 #galeria h1 {
@@ -488,9 +461,6 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 }
 
 #bideoa {
-	position:relative;
-	float:left;
-	width:65%;
 }
 
 #bideoa h1 {
@@ -534,24 +504,86 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	margin-left: 1em;
 }
 
-
 #kontaktua-form form { font-size: 13pt; }
 #kontaktua-form div { clear: left; margin-bottom: 10px; }
-#kontaktua-form label { float: left; margin-left: 0.5em; text-align: left; width: 100px; font-weight: bold; vertical-align: top; padding-top: 10px; }
+#kontaktua-form label { float: left; margin-left: 0.5em; text-align: left; width: 100px;
+	font-weight: bold; vertical-align: top; padding-top: 10px; }
 #kontaktua-form input[type="text"],
 #kontaktua-form input[type="email"]
-    { width: 500px; line-height: 26px; font-size: 20px; min-height: 26px; }
-#kontaktua-form textarea { width: 500px; height: 150px; line-height: 26px; font-size: 20px; }
-#kontaktua-form input[type="submit"] { float:right; margin-right: 60px; width: 150px; line-height: 26px; font-size: 20px; min-height: 26px; }
+    { width: 90%; line-height: 26px; font-size: 20px; min-height: 26px; }
+#kontaktua-form textarea { width: 90%; height: 150px; line-height: 26px; font-size: 20px; }
+#kontaktua-form input[type="submit"] { float:right; margin-right: 51px; width: 150px; line-height: 26px; font-size: 20px;
+	min-height: 26px; }
 #kontaktua-form ul li { color: #ff0000; margin-bottom: 5px; }
 
 
 #denda {
-	position:relative;
-	float:left;
-	width:65%;
+
 }
 
 #denda h1{
 	text-align: left;
+}
+
+@media screen and (max-width: 500px) {
+	#zutabea {
+		display: none;
+	}
+	.portada_argazkia {
+		display: none;
+	}
+	#container {
+		width:25em;
+	}
+	#cabecera {
+		width: 23em;
+	}
+	#content {
+		width:23em;
+	}
+	#pie {
+		width: 23em;
+	}
+	#access {
+		width: 23em;
+	}
+	#bloke-nagusia {
+		width: 100%;
+	}
+
+	#kontaktua-form input[type="submit"] {
+		margin-right: 27px;
+	}
+
+}
+
+@media screen and (min-width: 501px) and (max-width: 800px) {
+	#zutabea {
+		display: none;
+	}
+	.portada_argazkia {
+		display: none;
+	}
+	#container {
+		width:40em;
+	}
+	#cabecera {
+		width: 36em;
+	}
+	#content {
+		width:36em;
+	}
+	#pie {
+		width:36em;
+	}
+	#access {
+		width: 36em;
+	}
+	#bloke-nagusia {
+		width: 100%;
+	}
+	#kontaktua-form input[type="submit"] {
+		margin-right: 55px;
+	}
+
 }
