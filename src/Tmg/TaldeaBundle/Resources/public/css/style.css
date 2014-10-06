@@ -203,12 +203,12 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 .data-kontzertu {
 	background-color: #383838;
 	color:red;
-	width:72%;
+	width:84%;
 
 }
 .data-kontzertu h2 {
 	font-size: 15pt;
-	margin-left: 1em;
+	margin-left: 1.7em;
 	text-align: left;
 }
 .izena-kontzertu {
@@ -221,9 +221,9 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	float: left;*/
 }
 .img-kontzertu img {
-	width:135px;
-	height: 175px;
-	margin-left:3px;
+	width:80%;
+	height: 90%;
+	/*margin-left:3px;*/
 }
 .info-kontzertu{
 	margin-left: 0.5em;
@@ -336,8 +336,8 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	margin-bottom: 5px;
 }
 #karatula-img{
-	width:210px;
-	height: 220px;
+	width:90%;
+	height: 95%;
 	/*margin-left:20px;*/
 	/*margin-right: 10px;*/
 }
@@ -488,14 +488,16 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	margin-bottom: 5px;
 }
 .berria-argazki img {
-	width: 150px;
-	height: 160px;
+	width: 90%;
+	height: 95%;
 }
 .berria-testua {
 	position: relative;
 	float: right;
-	width: 70%;
-	margin-bottom: 5px;
+	width: 68%;
+}
+.berria-testua p {
+	margin-top: 7px;
 }
 .letra-ikusi, .letra-ezkutatu, .gehiago-ikusi, .gutxiago-ikusi {
 	cursor: pointer;
@@ -525,6 +527,10 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 	text-align: left;
 }
 
+.portada_argazkia_responsive {
+	display: none;
+}
+
 @media screen and (max-width: 500px) {
 	#zutabea {
 		display: none;
@@ -536,16 +542,16 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 		width:25em;
 	}
 	#cabecera {
-		width: 23em;
+		width: 100%;
 	}
 	#content {
-		width:23em;
+		width: 100%;
 	}
 	#pie {
-		width: 23em;
+		width: 100%;
 	}
 	#access {
-		width: 23em;
+		width: 100%;
 	}
 	#bloke-nagusia {
 		width: 100%;
@@ -553,6 +559,20 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 
 	#kontaktua-form input[type="submit"] {
 		margin-right: 27px;
+	}
+	#letra {
+		font-size: 8pt;
+	}
+	.data-kontzertu {
+		width: 87%;
+	}
+	.data-kontzertu h2 {
+		font-size: 12pt;
+		margin-left: 1em;
+	}
+	#galeria img {
+		width: 100px;
+		height: 100px;
 	}
 
 }
@@ -568,16 +588,16 @@ position:relative; width:60em; margin:10px auto 0px auto; /*border:1px solid #00
 		width:40em;
 	}
 	#cabecera {
-		width: 36em;
+		width: 100%;
 	}
 	#content {
-		width:36em;
+		width: 100%;
 	}
 	#pie {
-		width:36em;
+		width: 100%;
 	}
 	#access {
-		width: 36em;
+		width: 100%;
 	}
 	#bloke-nagusia {
 		width: 100%;
