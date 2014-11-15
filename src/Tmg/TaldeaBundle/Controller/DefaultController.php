@@ -121,7 +121,11 @@ class DefaultController extends Controller
                          ' bidali dizu: '.$kontaktua->getMezua());
                 $this->get('mailer')->send($message);
 
-                return $this->redirect($this->generateUrl('kontaktua'));
+                //return $this->redirect($this->generateUrl('kontaktua'));
+                //$em->flush();
+                $return = (json_encode(array('responseCode' => 200)));
+
+                return new Response($return,200,array('Content-Type'=>'application/json'));
             }
         }
 

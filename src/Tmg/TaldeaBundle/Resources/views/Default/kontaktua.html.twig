@@ -4,7 +4,7 @@
         <article id="kontaktua">
             <h1>{{'menu.kontaktua' | trans}}</h1>
             <div id="kontaktua-form">
-                <form action="{{ path('kontaktua') }}" method="post" {{ form_enctype(form) }} class="kontak-form">
+                <form id="form-kontaktua-ajax" action="{{ path('kontaktua') }}" method="post" {{ form_enctype(form) }} class="kontak-form">
                     {{ form_errors(form) }}
 
                     {{ form_row(form.izena) }}

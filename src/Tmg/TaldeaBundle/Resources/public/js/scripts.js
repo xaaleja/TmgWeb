@@ -42,6 +42,34 @@ $(document).ready(function() {
       $(this).next().slideUp("slow");
     }
   });
-
+      $('#form-kontaktua-ajax').submit(function(e){
+        e.preventDefault();
+        var $url=$('#form-kontaktua-ajax').attr('action');
+        var $formData = $('#form-kontaktua-ajax').serialize();
+        console.log($url);
+        $.ajax({
+            url: $url,
+            data: $formData,
+            method: 'post',
+            dataType: 'json',
+            cache: false,
+            success: function(data)
+            {
+                if(data.responseCode==200 )
+                {
+                    console.log('OK!');
+                    $('#form-kontaktua-ajax').find('input:text, input[type="email"], textarea').val('');
+                }
+                else
+                {
+                  alert('An unexpected error occured');
+                  console.log(data.responseCode);
+               }
+            },
+            error: function(err) {
+                console.log(err);
+            }
+        });
+    });
 });
 
